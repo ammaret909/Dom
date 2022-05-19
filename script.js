@@ -32,10 +32,29 @@ document.getElementById('ok').addEventListener('click',function (e) {
     }
 })
 
-let bodertick = 20
-document.getElementById('ok').addEventListener('click',function (e) {
-bodertick += 5
-let marginSet = 20
-document.getElementById('cancel').style.margin = `${marginSet}px ${bodertick}px`
-document.getElementById('no').style.margin = `${marginSet}px ${bodertick}px`
+let showText = ['ok','ง่าย','จริงๆ','นะจ๊ะ']
+let showIndex = 0;
+document.getElementById('no').addEventListener('dblclick',function (e) {
+    showIndex++
+    if(showIndex >= showText.length){
+        showIndex = 0
+    }
+    console.log(`show index = ${showIndex}`)
+    const okButton = document.getElementById('ok')
+    okButton.innerText = showText[showIndex]
+
+
+    // const okButton = document.getElementById('ok')
+    // if(okButton.innerText === 'ok'){
+    //     okButton.innerText = 'วิชานี้'
+    // }
+    // else if(okButton.innerText === 'วิชานี้'){
+    //     okButton.innerText = 'ง่าย'
+    // }
+    // else if(okButton.innerText === 'ง่าย'){
+    //     okButton.innerText = 'จริงๆนะจ๊ะ'
+    // }
+    // else{
+    //     okButton.innerText = 'ok'
+    // }
 })
