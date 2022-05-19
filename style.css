@@ -24,3 +24,10 @@
     background-color: black;
     color: white;
 }
+
+.toggleOn{
+    background-color: white;
+}
+.toggleOff{
+    background-color: darkgray;
+}
